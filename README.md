@@ -1,50 +1,114 @@
 # Todo List Application
 
-A simple and intuitive Todo List application with both command-line and graphical user interfaces.
+A modern, feature-rich Todo List application with multiple interfaces and AI-powered task management capabilities.
+
+## Version
+
+Current version: v1.1.0-beta
 
 ## Features
 
-- Add tasks with titles and descriptions
-- View all tasks in a list
-- Mark tasks as complete
-- Delete tasks
+### Multiple Interfaces
+- Command Line Interface (CLI) for quick task management
+- Graphical User Interface (GUI) for desktop users
+- Web Interface for browser-based access
+- RESTful API for programmatic access
+
+### Core Functionality
+- Task Management
+  - Create tasks with titles and descriptions
+  - View tasks in a customizable list format
+  - Mark tasks as complete
+  - Delete tasks
+  - Automatic task sorting and prioritization
+
+### Advanced Features
+- Smart tag system for task categorization
+- Advanced search with text and tag filters
+- Task metadata tracking (creation date, status)
 - Data persistence using JSON storage
-- Both CLI and GUI interfaces
+- Modular architecture for easy extensibility
 
-## Getting Started
+## Architecture
 
-### Prerequisites
+The application follows a modular architecture:
+- `todo_engine.py`: Core business logic and data management
+- `modules/`: Helper modules for tags and search functionality
+- Interface implementations:
+  - `todo_cli.py`: Command-line interface
+  - `todo_gui.py`: Tkinter-based desktop GUI
+  - `todo_web.py`: Flask-based web interface
+
+## Prerequisites
 
 - Python 3.x
 - Tkinter (included in standard Python installation)
+- Flask (for web interface)
 
-### Running the Application
+## Installation
 
-1. Clone or download this repository
-2. Navigate to the project directory
-
-To run the command-line interface:
 ```bash
-python todo.py
-```
+# Clone the repository
+git clone https://github.com/yourusername/todolist.git
 
-To run the graphical user interface:
-```bash
-python todo_gui.py
+# Navigate to project directory
+cd todolist
+
+# Optional: Create and activate virtual environment
+python -m venv venv
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
 
 ## Usage
 
 ### Command Line Interface
-- Choose options 1-5 from the menu
-- Follow the prompts to manage your tasks
 
-### Graphical User Interface
-- Click "Add Task" to create a new task
-- Select a task and click "Mark Complete" to update its status
-- Select a task and click "Delete Task" to remove it
-- Click "Refresh" to update the task list
+```bash
+python todo_cli.py
+```
+
+Follow the on-screen menu to:
+- Add new tasks
+- View all tasks
+- Mark tasks as complete
+- Delete tasks
+- Search tasks
+
+### Desktop GUI
+
+```bash
+python todo_gui.py
+```
+
+Features:
+- Intuitive graphical interface
+- Task list with sortable columns
+- Add tasks through a dialog window
+- Mark tasks complete with a single click
+- Delete tasks with confirmation
+
+### Web Interface
+
+```bash
+python todo_web.py
+```
+
+Access the web interface at `http://localhost:5000`
+- RESTful API endpoints for task management
+- Browser-based task management
+- Mobile-friendly interface
+
+## Data Storage
+
+All tasks are stored in `tasks.json` in the project root directory. The file is automatically created when you add your first task.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the LICENSE file for details.
