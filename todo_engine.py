@@ -1,4 +1,4 @@
-\"""Todo List Application Core Engine
+"""Todo List Application Core Engine
 
 This module provides the core functionality for the Todo List application.
 It handles all task-related operations including CRUD operations, data persistence,

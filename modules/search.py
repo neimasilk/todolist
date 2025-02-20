@@ -1,4 +1,4 @@
-\"""Task Search Engine
+"""Task Search Engine
 
 This module provides advanced search functionality for tasks in the Todo List application.
 It supports searching by text, tags, status, and combinations of these criteria.
